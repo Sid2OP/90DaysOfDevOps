@@ -132,6 +132,7 @@ No recent errors
 <img width="716" height="66" alt="image" src="https://github.com/user-attachments/assets/071ad144-e8a0-42ff-9593-83a58933accf" />
 
 Command 10: Authentication logs
+
 tail -n 50 /var/log/auth.log
 
 
