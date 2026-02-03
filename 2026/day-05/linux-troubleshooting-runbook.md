@@ -1,3 +1,4 @@
+![image.png](attachment:9b2bc84f-6ee7-4f93-97e0-72a7d1b77bc9:image.png)
 # Linux Troubleshooting Runbook
 
 ## Target Service / Process
