@@ -32,9 +32,13 @@ Confirms OS distribution and version
 Filesystem Sanity Check
 Command 3: 
 Create test directory & file
+
 mkdir /tmp/runbook-demo
+
 cp /etc/hosts /tmp/runbook-demo/hosts-copy
+
 ls -l /tmp/runbook-demo
+
 
 
 Observation:
