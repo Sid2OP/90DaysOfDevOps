@@ -172,7 +172,20 @@ Capture deeper diagnostics (strace, lsof, or enable debug logs)
 
 
 
+## Snapshot: CPU & Memory
 
+### Command 4: `top`
+
+```bash
+top
+```
+
+**Observation:**
+
+- CPU and memory usage within normal range
+- No abnormal spikes observed
+
+📸 Output:
 
 
 
