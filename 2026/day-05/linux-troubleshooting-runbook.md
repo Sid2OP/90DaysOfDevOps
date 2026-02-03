@@ -18,11 +18,11 @@ uname -a
 
 **Observation:**
 
-- Kernel version and architecture 확인
+- Kernel version and architecture 
 
 📸 Output:
 
-<img width="1512" height="43" alt="image" src="https://github.com/user-attachments/assets/9ba089ce-b528-4580-b703-ea6fb832928f" />
+<img width="1512" height="43" alt="image" src="https://github.com/user-attachments/assets/87135b5c-6014-43cf-8778-eded87d14e29" />
 
 
 ---
@@ -39,7 +39,7 @@ cat /etc/os-release
 
 📸 Output:
 
-![image.png](attachment:8d8152fd-07eb-4c00-8bdd-5a12110ecfc3:image.png)
+<img width="866" height="308" alt="image" src="https://github.com/user-attachments/assets/c0b0c3ae-c098-4dc0-98f5-f40f174a87d9" />
 
 ---
 
@@ -60,7 +60,7 @@ ls -l /tmp/runbook-demo
 
 📸 Output:
 
-![image.png](attachment:09b9af73-b605-4833-a8c3-1849415232ca:image.png)
+<img width="602" height="105" alt="image" src="https://github.com/user-attachments/assets/b906e396-e3bd-429f-874f-3553c8a7924b" />
 
 ---
 
@@ -80,7 +80,8 @@ top
 
 📸 Output:
 
-![image.png](attachment:ed6e02f8-50e0-4218-8888-2449a093b7d3:image.png)
+<img width="1037" height="410" alt="image" src="https://github.com/user-attachments/assets/28e84ab1-1bea-4831-88cf-0d437b61e878" />
+
 
 ---
 
@@ -98,7 +99,8 @@ free -h
 
 📸 Output:
 
-![image.png](attachment:ba0f99d1-680f-45f6-b7e1-c7e134461b0b:image.png)
+<img width="927" height="91" alt="image" src="https://github.com/user-attachments/assets/860fae3e-f0c1-48ca-a4ae-e0e469e1b3d9" />
+
 
 ---
 
@@ -118,7 +120,8 @@ df -h
 
 📸 Output:
 
-![image.png](attachment:268a39d9-ff75-4135-8905-a6e8ae5b9df7:image.png)
+<img width="805" height="180" alt="image" src="https://github.com/user-attachments/assets/53f9d5b5-7a02-4a08-86e8-426183f2d818" />
+
 
 ---
 
@@ -135,8 +138,8 @@ du -sh /var/log
 - No unexpected growth
 
 📸 Output:
+<img width="766" height="141" alt="image" src="https://github.com/user-attachments/assets/9ed8da02-4226-417d-8f49-4f4d4da23893" />
 
-![image.png](attachment:67e88995-7204-4cad-90f1-3cadc980296d:image.png)
 
 ---
 
@@ -155,7 +158,8 @@ ss -tulpn | grep sshd
 
 📸 Output:
 
-![image.png](attachment:46a970cd-71dd-422f-bc5c-23e8c42e361c:image.png)
+<img width="1210" height="67" alt="image" src="https://github.com/user-attachments/assets/a0f505c8-e10f-4f88-a310-a2149a81ec5b" />
+
 
 ---
 
@@ -175,7 +179,8 @@ journalctl -u sshd -n 50
 
 📸 Output:
 
-![image.png](attachment:b578f479-3930-4d39-b45d-c2b61a09609d:image.png)
+<img width="716" height="66" alt="image" src="https://github.com/user-attachments/assets/3ef8e901-99da-4b72-8a36-6a25ac1f326d" />
+
 
 ---
 
@@ -193,7 +198,9 @@ tail -n 50 /var/log/auth.log
 
 📸 Output:
 
-![image.png](attachment:65fd2d14-d21a-458e-b3eb-46bf113eaeba:image.png)
+<img width="1587" height="588" alt="image" src="https://github.com/user-attachments/assets/ba819311-06ec-4ad2-b481-813d8ab9ff0f" />
+
+
 
 ---
 
