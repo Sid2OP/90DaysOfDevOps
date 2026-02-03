@@ -1,176 +1,67 @@
-Linux Troubleshooting Runbook DAY-5 
-Target Service / Process
+# Linux Troubleshooting Runbook
 
-Service: sshd
-Why chosen: Critical for remote access and commonly troubleshot
+## Target Service / Process
 
-Environment Basics
-Command 1: uname -a
+**Service:** `sshd`
+
+**Why chosen:** Critical for remote access and commonly troubleshot
+
+---
+
+## Environment Basics
+
+### Command 1: `uname -a`
+
+```bash
 uname -a
+```
 
+**Observation:**
 
-Observation:
-
-Kernel version and architecture
-📸 Output:
-
-<img width="1512" height="43" alt="image" src="https://github.com/user-attachments/assets/b2b06c5b-d276-4ecb-87b3-7693011ea94f" />
-
-
-Command 2:
-cat /etc/os-release
-cat /etc/os-release
-
-
-Observation:
-
-Confirms OS distribution and version
+- Kernel version and architecture 확인
 
 📸 Output:
-<img width="866" height="308" alt="image" src="https://github.com/user-attachments/assets/51094668-e557-4044-b150-7993dea99774" />
 
-Filesystem Sanity Check
-Command 3: 
-Create test directory & file
+![image.png](attachment:d4eaa040-2a5e-4921-89a6-75cd0dea337d:image.png)
 
+---
+
+### Command 2: `cat /etc/os-release`
+
+```bash
+cat /etc/os-release
+```
+
+**Observation:**
+
+- Confirms OS distribution and version
+
+📸 Output:
+
+![image.png](attachment:8d8152fd-07eb-4c00-8bdd-5a12110ecfc3:image.png)
+
+---
+
+## Filesystem Sanity Check
+
+### Command 3: Create test directory & file
+
+```bash
 mkdir /tmp/runbook-demo
-
 cp /etc/hosts /tmp/runbook-demo/hosts-copy
-
 ls -l /tmp/runbook-demo
 
+```
 
+**Observation:**
 
-Observation:
-
-Filesystem is writable and responding normally
-
-📸 Output:
-<img width="602" height="105" alt="image" src="https://github.com/user-attachments/assets/2a8e78ae-d36d-48ec-9065-ec03c55bd900" />
-
-Snapshot: CPU & Memory
-Command 4: top
-top
-
-
-Observation:
-
-CPU and memory usage within normal range
-
-No abnormal spikes observed
-📸 Output:
-<img width="1037" height="410" alt="image" src="https://github.com/user-attachments/assets/5d48ab97-5b2a-4c78-9d05-ee2040c00850" />
-
-Command 5: 
-free -h
-free -h
-
-
-Observation:
-
-Sufficient free memory available
-
-No memory pressure
+- Filesystem is writable and responding normally
 
 📸 Output:
-<img width="927" height="91" alt="image" src="https://github.com/user-attachments/assets/184361d8-b028-4cbd-8507-602d63161ccf" />
 
-Snapshot: Disk & IO
-Command 6:
-df -h
-df -h
+![image.png](attachment:09b9af73-b605-4833-a8c3-1849415232ca:image.png)
 
-
-Observation:
-
-Disk usage under safe limits
-
-No partitions nearing full capacity
-
-📸 Output:
-<img width="805" height="180" alt="image" src="https://github.com/user-attachments/assets/4796ed70-a016-4b80-b4a1-8394cc887dd5" />
-
-Command 7:
-du -sh /var/log
-du -sh /var/log
-
-
-Observation:
-
-Log directory size reasonable
-
-No unexpected growth
-
-📸 Output:
-<img width="766" height="141" alt="image" src="https://github.com/user-attachments/assets/f0d08746-3973-41cc-b425-8cb4efdfe3d8" />
-
-Snapshot: Network
-Command 8:
-Check listening ports
-ss -tulpn | grep sshd
-
-
-Observation:
-
-SSH is listening on expected port
-
-No port conflicts detected
-
-📸 Output:
-<img width="1210" height="67" alt="image" src="https://github.com/user-attachments/assets/4f86235a-7464-4e2c-8e4f-6559905c7b5d" />
-
-Logs Reviewed
-Command 9:Service logs
-journalctl -u sshd -n 50
-
-
-Observation:
-
-No recent errors
-
-📸 Output:
-<img width="716" height="66" alt="image" src="https://github.com/user-attachments/assets/071ad144-e8a0-42ff-9593-83a58933accf" />
-
-Command 10: Authentication logs
-
-tail -n 50 /var/log/auth.log
-
-
-Observation:
-
-Successful logins visible
-
-No repeated failures
-
-📸 Output:
-<img width="1587" height="588" alt="image" src="https://github.com/user-attachments/assets/26af62fc-31c5-4d55-9bd7-27d7903bf610" />
-
-Quick Findings
-
-Service is active and stable
-
-Resource usage is normal
-
-No disk, memory, or network bottlenecks
-
-Logs show no critical errors
-
-If This Worsens (Next Steps)
-
-Restart service and monitor logs:
-
-systemctl restart sshd
-
-
-Increase logging verbosity for SSH
-
-Capture deeper diagnostics (strace, lsof, or enable debug logs)
-
-
-
-
-
-
+---
 
 ## Snapshot: CPU & Memory
 
@@ -178,6 +69,7 @@ Capture deeper diagnostics (strace, lsof, or enable debug logs)
 
 ```bash
 top
+
 ```
 
 **Observation:**
@@ -187,10 +79,140 @@ top
 
 📸 Output:
 
+![image.png](attachment:ed6e02f8-50e0-4218-8888-2449a093b7d3:image.png)
 
+---
 
+### Command 5: `free -h`
 
+```bash
+free -h
 
+```
 
+**Observation:**
 
+- Sufficient free memory available
+- No memory pressure
 
+📸 Output:
+
+![image.png](attachment:ba0f99d1-680f-45f6-b7e1-c7e134461b0b:image.png)
+
+---
+
+## Snapshot: Disk & IO
+
+### Command 6: `df -h`
+
+```bash
+df -h
+
+```
+
+**Observation:**
+
+- Disk usage under safe limits
+- No partitions nearing full capacity
+
+📸 Output:
+
+![image.png](attachment:268a39d9-ff75-4135-8905-a6e8ae5b9df7:image.png)
+
+---
+
+### Command 7: `du -sh /var/log`
+
+```bash
+du -sh /var/log
+
+```
+
+**Observation:**
+
+- Log directory size reasonable
+- No unexpected growth
+
+📸 Output:
+
+![image.png](attachment:67e88995-7204-4cad-90f1-3cadc980296d:image.png)
+
+---
+
+## Snapshot: Network
+
+### Command 8: Check listening ports
+
+```bash
+ss -tulpn | grep sshd
+```
+
+**Observation:**
+
+- SSH is listening on expected port
+- No port conflicts detected
+
+📸 Output:
+
+![image.png](attachment:46a970cd-71dd-422f-bc5c-23e8c42e361c:image.png)
+
+---
+
+## Logs Reviewed
+
+### Command 9: Service logs
+
+```bash
+journalctl -u sshd -n 50
+
+```
+
+**Observation:**
+
+- No recent errors
+- Normal authentication activity
+
+📸 Output:
+
+![image.png](attachment:b578f479-3930-4d39-b45d-c2b61a09609d:image.png)
+
+---
+
+### Command 10: Authentication logs
+
+```bash
+tail -n 50 /var/log/auth.log
+
+```
+
+**Observation:**
+
+- Successful logins visible
+- No repeated failures
+
+📸 Output:
+
+![image.png](attachment:65fd2d14-d21a-458e-b3eb-46bf113eaeba:image.png)
+
+---
+
+## Quick Findings
+
+- Service is **active and stable**
+- Resource usage is **normal**
+- No disk, memory, or network bottlenecks
+- Logs show **no critical errors**
+
+---
+
+## If This Worsens (Next Steps)
+
+1. Restart service and monitor logs:
+    
+    ```bash
+    systemctl restart sshd
+    
+    ```
+    
+2. Increase logging verbosity for SSH
+3. Capture deeper diagnostics (`strace`, `lsof`, or enable debug logs)
