@@ -102,4 +102,7 @@ Shows the last 2 lines of the file.
 - Practiced creating, writing, appending, and reading files
 - Used `>`, `>>`, `cat`, `head`, `tail`, and `tee`
 - Commands are simple and reusable for daily Linux work
+  
+  OUTPUT
+  
   <img width="1236" height="388" alt="image" src="https://github.com/user-attachments/assets/f61c9a6f-f365-4977-b1f4-d32e33658bf3" />
