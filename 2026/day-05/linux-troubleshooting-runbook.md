@@ -1,4 +1,3 @@
-![image.png](attachment:9b2bc84f-6ee7-4f93-97e0-72a7d1b77bc9:image.png)
 # Linux Troubleshooting Runbook
 
 ## Target Service / Process
@@ -23,7 +22,8 @@ uname -a
 
 📸 Output:
 
-![image.png](attachment:d4eaa040-2a5e-4921-89a6-75cd0dea337d:image.png)
+<img width="1512" height="43" alt="image" src="https://github.com/user-attachments/assets/9ba089ce-b528-4580-b703-ea6fb832928f" />
+
 
 ---
 
