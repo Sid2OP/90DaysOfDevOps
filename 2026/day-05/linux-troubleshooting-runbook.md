@@ -13,10 +13,12 @@ Observation:
 
 Kernel version and architecture
 📸 Output:
+
 <img width="1512" height="43" alt="image" src="https://github.com/user-attachments/assets/b2b06c5b-d276-4ecb-87b3-7693011ea94f" />
 
 
-Command 2: cat /etc/os-release
+Command 2:
+cat /etc/os-release
 cat /etc/os-release
 
 
@@ -28,7 +30,8 @@ Confirms OS distribution and version
 <img width="866" height="308" alt="image" src="https://github.com/user-attachments/assets/51094668-e557-4044-b150-7993dea99774" />
 
 Filesystem Sanity Check
-Command 3: Create test directory & file
+Command 3: 
+Create test directory & file
 mkdir /tmp/runbook-demo
 cp /etc/hosts /tmp/runbook-demo/hosts-copy
 ls -l /tmp/runbook-demo
@@ -54,7 +57,8 @@ No abnormal spikes observed
 📸 Output:
 <img width="1037" height="410" alt="image" src="https://github.com/user-attachments/assets/5d48ab97-5b2a-4c78-9d05-ee2040c00850" />
 
-Command 5: free -h
+Command 5: 
+free -h
 free -h
 
 
@@ -68,7 +72,8 @@ No memory pressure
 <img width="927" height="91" alt="image" src="https://github.com/user-attachments/assets/184361d8-b028-4cbd-8507-602d63161ccf" />
 
 Snapshot: Disk & IO
-Command 6: df -h
+Command 6:
+df -h
 df -h
 
 
@@ -81,7 +86,8 @@ No partitions nearing full capacity
 📸 Output:
 <img width="805" height="180" alt="image" src="https://github.com/user-attachments/assets/4796ed70-a016-4b80-b4a1-8394cc887dd5" />
 
-Command 7: du -sh /var/log
+Command 7:
+du -sh /var/log
 du -sh /var/log
 
 
@@ -95,7 +101,8 @@ No unexpected growth
 <img width="766" height="141" alt="image" src="https://github.com/user-attachments/assets/f0d08746-3973-41cc-b425-8cb4efdfe3d8" />
 
 Snapshot: Network
-Command 8: Check listening ports
+Command 8:
+Check listening ports
 ss -tulpn | grep sshd
 
 
@@ -109,7 +116,7 @@ No port conflicts detected
 <img width="1210" height="67" alt="image" src="https://github.com/user-attachments/assets/4f86235a-7464-4e2c-8e4f-6559905c7b5d" />
 
 Logs Reviewed
-Command 9: Service logs
+Command 9:Service logs
 journalctl -u sshd -n 50
 
 
