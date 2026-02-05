@@ -25,7 +25,6 @@ ssh -i your-key.pem ubuntu@<your-instance-ip>
 
 **Why:** Securely connects to the remote cloud server for management.
 
-📸 Screenshot: `ssh-connection.png`
 
 ---
 
