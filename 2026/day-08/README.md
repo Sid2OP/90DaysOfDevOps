@@ -1,4 +1,4 @@
-# Day 08 – Cloud Server Setup: Docker, Nginx & Web Deployment
+# Day 08 – Cloud Server Setup: Nginx & Web Deployment
 
 ## Task
 Today's goal is to **deploy a real web server on the cloud** and learn practical server management.
