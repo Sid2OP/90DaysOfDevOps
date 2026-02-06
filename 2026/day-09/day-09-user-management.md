@@ -47,10 +47,10 @@ sudo passwd professor
 cat /etc/passwd | grep -E "tokyo|berlin|professor"
 ls /home
 
-screenshot-
-<img width="970" height="152" alt="useradd" src="https://github.com/user-attachments/assets/d7c79cec-3d0a-41bb-ac81-7239cb6bbd5f" />
 
 ```
+screenshot-
+<img width="970" height="152" alt="useradd" src="https://github.com/user-attachments/assets/d7c79cec-3d0a-41bb-ac81-7239cb6bbd5f" />
 
 ---
 
@@ -67,10 +67,10 @@ sudo groupadd admins
 ```bash
 cat /etc/group | grep -E "developers|admins"
 
-screenshot-
-<img width="912" height="137" alt="groupadd" src="https://github.com/user-attachments/assets/6070c795-01d9-4aa8-8833-955ad9f46819" />
 
 ```
+screenshot-
+<img width="912" height="137" alt="groupadd" src="https://github.com/user-attachments/assets/6070c795-01d9-4aa8-8833-955ad9f46819" />
 
 ---
 
@@ -90,10 +90,10 @@ groups tokyo
 groups berlin
 groups professor
 
-screenshot-
-<img width="981" height="231" alt="usermod" src="https://github.com/user-attachments/assets/c2f37744-b04a-4641-b41c-11c9faebfe7f" />
 
 ```
+screenshot-
+<img width="981" height="231" alt="usermod" src="https://github.com/user-attachments/assets/c2f37744-b04a-4641-b41c-11c9faebfe7f" />
 
 ---
 
@@ -133,10 +133,10 @@ ls -ld /opt/dev-project
 sudo -u tokyo touch /opt/dev-project/tokyo-file.txt
 sudo -u berlin touch /opt/dev-project/berlin-file.txt
 
-screenshot-
-<img width="1017" height="257" alt="chgrp" src="https://github.com/user-attachments/assets/838fb757-12de-44d9-b36c-466bcc27ebd4" />
 
 ```
+screenshot-
+<img width="1017" height="257" alt="chgrp" src="https://github.com/user-attachments/assets/838fb757-12de-44d9-b36c-466bcc27ebd4" />
 
 ---
 
@@ -187,10 +187,10 @@ groups nairobi
 ```bash
 sudo -u nairobi touch /opt/team-workspace/nairobi-file.txt
 
-screenshot-
-<img width="1071" height="373" alt="last" src="https://github.com/user-attachments/assets/c269bc38-036b-4f42-af04-e3ae52d835b7" />
 
 ```
+screenshot-
+<img width="1071" height="373" alt="last" src="https://github.com/user-attachments/assets/c269bc38-036b-4f42-af04-e3ae52d835b7" />
 
 ---
 
