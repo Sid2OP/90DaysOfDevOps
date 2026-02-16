@@ -52,7 +52,7 @@ ip addr show
 
 <img width="1072" height="312" alt="image" src="https://github.com/user-attachments/assets/5627cf18-870c-4e68-bd31-3b3c281b29d9" />
 
-## sk 3: CIDR & Subnetting
+## Task 3: CIDR & Subnetting
 
 **CIDR Meaning**
 
