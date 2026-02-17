@@ -1,4 +1,4 @@
-**Day 17 – Shell Scripting: Loops, Arguments & Error Handling**
+Day 17 – Shell Scripting: Loops, Arguments & Error Handling
 
 **Challenge Tasks**
 
