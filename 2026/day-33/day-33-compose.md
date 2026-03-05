@@ -241,6 +241,3 @@ Docker Compose automatically loads variables from `.env`.
 
 ---
 
-📸 Screenshot: Nginx page in browser
-
----
