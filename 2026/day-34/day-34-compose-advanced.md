@@ -120,7 +120,7 @@ services:
     networks:
       - app-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U devuser"]
+      test: ["CMD-SHELL", "pg_isready -U devuser -d devdb"]
       interval: 10s
       timeout: 5s
       retries: 5
