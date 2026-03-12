@@ -1,3 +1,5 @@
+Day 42 – Runners: GitHub-Hosted & Self-Hosted
+
 ## Overview
 
 Every GitHub Actions job needs a **runner** — a machine that picks up the job, executes each step, and reports results back to GitHub. Runners come in two flavors: GitHub-hosted (fully managed by GitHub) and self-hosted (managed by you on your own infrastructure).
