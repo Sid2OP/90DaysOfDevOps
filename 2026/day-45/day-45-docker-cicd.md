@@ -85,49 +85,33 @@ Expand the workflow to log in and push with two tags:
 
 ```yaml
 # .github/workflows/docker-publish.yml
-name: Docker Build & Push
+name: Docker build & push
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-env:
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/github-actions-practice
+    workflow_dispatch
 
 jobs:
-  docker:
-    runs-on: ubuntu-latest
+    build-and-push:
+        runs-on: ubuntu-latest
+        
+        steps:
+          - name: Code checkout
+            uses: actions/checkout@v4
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+          - name: Login to docker hub
+            uses: docker/login-action@v3
+            with:
+                username: ${{ vars.DOCKERHUB_USER }}
+                password: ${{ secrets.DOCKERHUB_PASS }}
+          
+          - name: Build and push to docker hub
+            uses: docker/build-push-action@v6
+            with:
+                context: .
+                push: true
+                tags: ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{ github.ref_name}}
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Log in to Docker Hub
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_TOKEN }}
-
-      - name: Get short SHA
-        id: sha
-        run: echo "short=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_OUTPUT
-
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
-          tags: |
-            ${{ env.IMAGE_NAME }}:latest
-            ${{ env.IMAGE_NAME }}:sha-${{ steps.sha.outputs.short }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+        
 ```
 
 **Verify:** After a push to `main`, go to [hub.docker.com](http://hub.docker.com) → your repository. You should see two tags:
