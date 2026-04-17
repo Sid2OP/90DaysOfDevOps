@@ -115,6 +115,9 @@ terraform plan      # Review -- this will create 30+ resources
 
 Review the plan carefully before applying. You should see: EKS cluster, IAM roles, node group, security groups, and more.
 
+<img width="1638" height="712" alt="image" src="https://github.com/user-attachments/assets/17bb55c0-6d2b-4a80-948a-871e50776cb8" />
+
+
 ---
 
 ### Task 4: Apply and Connect kubectl
